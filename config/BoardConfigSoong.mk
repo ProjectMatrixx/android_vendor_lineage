@@ -32,6 +32,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     camera_needs_client_info_lib \
+    target_alternative_futex_waiters \
     camera_needs_client_info_lib_oplus \
     camera_override_format_from_reserved \
     camera_uses_newer_hidl_override_format \
@@ -75,6 +76,7 @@ endif
 
 # Soong bool variables
 SOONG_CONFIG_lineageGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
+SOONG_CONFIG_lineageGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
 SOONG_CONFIG_lineageGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_lineageGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_lineageGlobalVars_camera_uses_newer_hidl_override_format := $(TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT)
