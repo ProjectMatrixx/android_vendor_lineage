@@ -3,6 +3,7 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/crdroid.mk)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
 $(call inherit-product-if-exists, external/faceunlock/config.mk)
+$(call inherit-product-if-exists, vendor/lineage/audio/audio.mk)
 
 PRODUCT_BRAND ?= crDroidAndroid
 
