@@ -198,6 +198,23 @@ gralloc_handle_ubwcp_format {
     },
 }
 
+
+soong_config_module_type {
+    name: "needs_oplus_tag",
+    module_type: "cc_defaults",
+    config_namespace: "lineageGlobalVars",
+    bool_variables: ["needs_oplus_tag"],
+    properties: ["cppflags"],
+}
+needs_oplus_tag {
+    name: "needs_oplus_vendor_tag",
+    soong_config_variables: {
+        needs_oplus_tag: {
+            cppflags: ["-DNEEDS_OPLUS_VENDOR_TAG"],
+        },
+    },
+}
+
 soong_config_module_type {
     name: "target_shim_libs",
     module_type: "cc_defaults",
