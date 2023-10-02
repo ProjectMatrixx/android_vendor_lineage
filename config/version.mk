@@ -6,6 +6,12 @@ MATRIXX_VERSION := 6.0
 
 MATRIXX_BUILD_TYPE ?= Unofficial
 
+ifeq ($(WITH_GAPPS), true)
+  MATRIXX_BUILD_VARIANT := Gapps
+else
+  MATRIXX_BUILD_VARIANT := Vanilla
+endif
+
 ifeq ($(MATRIXX_BUILD_TYPE), Official)
   OFFICIAL_DEVICES = $(shell cat vendor/lineage/matrixx.devices)
   FOUND_DEVICE =  $(filter $(LINEAGE_BUILD), $(OFFICIAL_DEVICES))
