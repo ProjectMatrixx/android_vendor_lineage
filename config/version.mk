@@ -2,7 +2,7 @@ PRODUCT_VERSION_MAJOR = 13
 PRODUCT_VERSION_MINOR = 0
 
 # Increase MATRIXX Version with each major release.
-MATRIXX_VERSION := 7.0
+MATRIXX_VERSION := 8.0
 
 MATRIXX_BUILD_TYPE ?= Unofficial
 
