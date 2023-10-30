@@ -40,6 +40,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0
 endif
 
+# GAPPS
+ifeq ($(WITH_GAPPS),true)
+$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+else ifeq ($(WITH_GAPPS),true)
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+endif
+
 # Disable async MTE on system_server
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     arm64.memtag.process.system_server=off
