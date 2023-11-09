@@ -278,4 +278,12 @@
         <item>com.android.vending</item>
         <item>com.google.android.gms</item>
     </string-array>
+    
+    <!-- A list of apps that are allowed to have another instance on a device
+    in the clone profile. -->
+    <string-array name="cloneable_apps" translatable="false">
+    <item>com.whatsapp</item>
+    <item>org.telegram.messenger</item>
+    <item>com.instagram.android</item>        
+    </string-array>    
 </resources>
