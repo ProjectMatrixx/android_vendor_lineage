@@ -36,6 +36,11 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0
 
+# GAPPS
+ifeq ($(WITH_GMS),true)
+$(call inherit-product, vendor/pixel/gms/products/gms.mk)
+endif
+
 # Cloned app exemption
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml
