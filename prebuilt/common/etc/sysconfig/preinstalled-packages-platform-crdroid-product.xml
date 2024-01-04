@@ -88,4 +88,52 @@
         <install-in user-type="PROFILE" />
         <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
     </install-in-user-type>
+    <!-- Via Browser -->
+    <install-in-user-type package="mark.via.gp">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
+    <!-- Auxio -->
+    <install-in-user-type package="org.oxycblt.auxio">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
+    <!-- GameSpace -->
+    <install-in-user-type package="io.chaldeaprjkt.gamespace">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
+    <!-- Dolby -->
+    <install-in-user-type package="co.aospa.settings.dolby">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>    
+    <!-- Google Calculator -->
+    <install-in-user-type package="com.google.android.calculator">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>    
+    <!-- Google Calendar -->
+    <install-in-user-type package="com.google.android.calendar">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>    
+    <!-- Google Quicksearchbox -->
+    <install-in-user-type package="com.google.android.googlequicksearchbox">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>    
+    <!-- Google Play Store -->
+    <install-in-user-type package="com.android.vending">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>    
 </config>
