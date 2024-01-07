@@ -22,8 +22,26 @@
     </install-in-user-type>
 
     <!-- System packages that should not be pre-installed on the CLONE profile. -->
+    <!-- Auxio -->
+    <install-in-user-type package="org.oxycblt.auxio">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
     <!-- Camera -->
     <install-in-user-type package="com.android.camera">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
+    <!-- Dolby -->
+    <install-in-user-type package="co.aospa.settings.dolby">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
+    <!-- GameSpace -->
+    <install-in-user-type package="io.chaldeaprjkt.gamespace">
         <install-in user-type="FULL" />
         <install-in user-type="PROFILE" />
         <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
@@ -124,6 +142,12 @@
         <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
     </install-in-user-type>
     <install-in-user-type package="com.android.cellbroadcastreceiver.module">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+    </install-in-user-type>
+    <!-- Via Browser -->
+    <install-in-user-type package="mark.via.gp">
         <install-in user-type="FULL" />
         <install-in user-type="PROFILE" />
         <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
