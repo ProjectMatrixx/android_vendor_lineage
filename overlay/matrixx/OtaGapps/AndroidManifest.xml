@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 Project Matrixx
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="matrixx.updater.gapps.overlay">
+
+    <overlay
+        android:isStatic="true"
+        android:priority="250"
+        android:targetPackage="com.matrixx.updater" />
+
+    <application android:label="Gapps Update" android:hasCode="false" android:allowBackup="false"/>
+</manifest>
