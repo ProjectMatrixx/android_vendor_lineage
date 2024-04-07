@@ -258,6 +258,9 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 # Certification
 $(call inherit-product-if-exists, vendor/certification/config.mk)
 
+# Microsoft
+$(call inherit-product-if-exists, vendor/microsoft/packages.mk)
+
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
