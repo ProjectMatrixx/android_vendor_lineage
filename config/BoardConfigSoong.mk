@@ -35,6 +35,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     camera_needs_client_info_lib_oplus \
     camera_override_format_from_reserved \
     gralloc_handle_has_custom_content_md_reserved_size \
+    uses_miui_camera \
     gralloc_handle_has_reserved_size \
     target_camera_package_name \
     target_health_charging_control_charging_path \
@@ -86,6 +87,7 @@ SOONG_CONFIG_lineageQcomVars_supports_extended_compress_format := $(AUDIO_FEATUR
 SOONG_CONFIG_lineageQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_lineageGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
 SOONG_CONFIG_lineageGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
+SOONG_CONFIG_lineageGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
@@ -99,6 +101,7 @@ TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED ?= 0
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS ?= true
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE ?= false
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE ?= true
+TARGET_INCLUDES_MIUI_CAMERA ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB ?= libperfmgr-ext
 TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
