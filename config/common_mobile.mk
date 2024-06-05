@@ -13,9 +13,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
 
+ifneq ($(WITH_GMS), true)
 # Apps
 PRODUCT_PACKAGES += \
-    Backgrounds \
+    Backgrounds
+endif
+
+PRODUCT_PACKAGES += \
     Glimpse \
     LatinIME
 
