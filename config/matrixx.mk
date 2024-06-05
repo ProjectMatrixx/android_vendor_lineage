@@ -47,9 +47,19 @@ endif
 # GAPPS
 ifeq ($(WITH_GMS),true)
 $(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
-PRODUCT_PACKAGES += OtaGapps
+PRODUCT_PACKAGES += \
+    GappsFrameworks \
+    GappsLauncherOverlay \
+    GappsSettings \
+    GappsSystemUI \
+    OtaGapps
 else
-PRODUCT_PACKAGES += OtaVanila
+PRODUCT_PACKAGES += \
+    VanilaFrameworks \
+    VanilaLauncherOverlay \
+    VanilaSettings \
+    VanilaSystemUI \
+    OtaVanila
 endif
 
 # Cloned app exemption
