@@ -526,7 +526,7 @@ include_miui_camera {
 soong_config_module_type {
     name: "needs_camera_boottime",
     module_type: "cc_defaults",
-    config_namespace: "evolutionGlobalVars",
+    config_namespace: "lineageGlobalVars",
     bool_variables: ["needs_camera_boottime"],
     properties: ["cppflags"],
 }
@@ -543,7 +543,7 @@ needs_camera_boottime {
 soong_config_module_type {
     name: "uses_miui_camera",
     module_type: "cc_defaults",
-    config_namespace: "evolutionGlobalVars",
+    config_namespace: "lineageGlobalVars",
     bool_variables: ["uses_miui_camera"],
     properties: ["cppflags"],
 }
