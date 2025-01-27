@@ -40,6 +40,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # GAPPS
 ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
 endif
 
 # Cloned app exemption
