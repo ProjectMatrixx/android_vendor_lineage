@@ -33,14 +33,13 @@ LINEAGE_DISPLAY_VERSION := Matrixx-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MI
 MATRIXX_BUILD_INFO := $(LINEAGE_VERSION)
 
 # Matrixx properties
-ADDITIONAL_SYSTEM_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     ro.matrixx.battery?=$(MATRIXX_BATTERY) \
     ro.matrixx.build.variant=$(MATRIXX_BUILD_VARIANT) \
     ro.matrixx.build.version=$(LINEAGE_VERSION) \
     ro.matrixx.chipset?=$(MATRIXX_CHIPSET) \
     ro.matrixx.display_resolution?=$(MATRIXX_DISPLAY) \
     ro.matrixx.display.version=$(LINEAGE_DISPLAY_VERSION) \
-    ro.matrixx.maintainer=$(MATRIXX_MAINTAINER) \
     ro.matrixx.release.type=$(MATRIXX_BUILD_TYPE) \
     ro.matrixx.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(MATRIXX_VERSION)
