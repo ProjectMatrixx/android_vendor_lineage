@@ -4,6 +4,8 @@ PRODUCT_VERSION_MINOR = 0
 # Increase MATRIXX Version with each major release.
 MATRIXX_VERSION := 11.1.0
 
+MATRIXX_RELEASE_CODE := Axiom
+
 MATRIXX_BUILD_TYPE ?= Unofficial
 
 ifeq ($(WITH_GMS), true)
@@ -41,5 +43,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.matrixx.display_resolution?=$(MATRIXX_DISPLAY) \
     ro.matrixx.display.version=$(LINEAGE_DISPLAY_VERSION) \
     ro.matrixx.release.type=$(MATRIXX_BUILD_TYPE) \
+    ro.matrixx.release.code=$(MATRIXX_RELEASE_CODE) \
     ro.matrixx.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(MATRIXX_VERSION)
