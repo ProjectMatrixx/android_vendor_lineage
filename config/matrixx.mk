@@ -40,7 +40,15 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # GAPPS
 ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
+endif
+
+ifeq ($(TARGET_INCLUDE_NEXUS),true)
 $(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
+PRODUCT_PACKAGES += \
+    GoogleSettingsOverlayNexus
+else
+    PRODUCT_PACKAGES += \
+        SettingsOverlay
 endif
 
 # Cloned app exemption
