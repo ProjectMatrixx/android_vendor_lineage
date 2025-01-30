@@ -14,16 +14,16 @@ else
   MATRIXX_BUILD_VARIANT := Vanilla
 endif
 
-ifeq ($(MATRIXX_BUILD_TYPE), Official)
--include vendor/lineage-priv/keys/keys.mk
-  OFFICIAL_DEVICES = $(shell cat vendor/lineage/matrixx.devices)
-  FOUND_DEVICE =  $(filter $(LINEAGE_BUILD), $(OFFICIAL_DEVICES))
-    ifeq ($(FOUND_DEVICE),$(LINEAGE_BUILD))
-      MATRIXX_BUILD_TYPE := Official
-    else
-      MATRIXX_BUILD_TYPE := Unofficial
-    endif
-endif
+#ifeq ($(MATRIXX_BUILD_TYPE), Official)
+#-include vendor/lineage-priv/keys/keys.mk
+#  OFFICIAL_DEVICES = $(shell cat vendor/lineage/matrixx.devices)
+#  FOUND_DEVICE =  $(filter $(LINEAGE_BUILD), $(OFFICIAL_DEVICES))
+#    ifeq ($(FOUND_DEVICE),$(LINEAGE_BUILD))
+#      MATRIXX_BUILD_TYPE := Official
+#    else
+#      MATRIXX_BUILD_TYPE := Unofficial
+#    endif
+#endif
 
 # Internal version
 LINEAGE_VERSION := Matrixx$(MATRIXX_VARIANT)-v$(MATRIXX_VERSION)-$(MATRIXX_BUILD_TYPE)-$(LINEAGE_BUILD)-$(MATRIXX_BUILD_VARIANT)-$(shell date +%Y%m%d)
