@@ -44,12 +44,11 @@ endif
 
 ifeq ($(TARGET_INCLUDE_NEXUS),true)
 $(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
+endif
+
 PRODUCT_PACKAGES += \
     GoogleSettingsOverlayNexus
-else
-    PRODUCT_PACKAGES += \
-        SettingsOverlay
-endif
+
 
 # Cloned app exemption
 PRODUCT_COPY_FILES += \
