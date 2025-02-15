@@ -61,6 +61,12 @@
         <item>com.android.networkstack.tethering</item>
         <!-- GMS location history -->
         <item>com.google.android.gms.location.history</item>
+        <!-- PrintSpooler -->
+        <item>com.android.printspooler</item>
+        <!-- Settings Intelligence -->
+        <item>com.google.android.settings.intelligence</item>
+        <!-- Cellbroadcastservice -->
+        <item>com.android.cellbroadcastservice</item>
     </string-array>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
