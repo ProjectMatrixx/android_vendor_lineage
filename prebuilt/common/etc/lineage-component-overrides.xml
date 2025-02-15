@@ -14,10 +14,23 @@
      limitations under the License.
 -->
 <config>
+
+    <component-override package="com.google.android.as">
+        <component class=".ambientmusic.history.HistoryContentProvider" enabled="false" />
+        <component class=".ambientmusic.history.HistoryActivity" enabled="false" />
+        <component class=".ambientmusic.AmbientMusicSettingsActivity" enabled="false" />
+        <component class=".ambientmusic.AmbientMusicNotificationsSettingsActivity" enabled="false" />
+        <component class=".ambientmusic.AmbientMusicSetupWizardActivity" enabled="false" />
+    </component-override>
+
     <component-override package="com.android.vending">
         <component class=".systemupdateactivity.SettingsSecurityEntryPoint" enabled="false" />
         <component class=".systemupdateactivity.SystemUpdateActivity" enabled="false" />
         <component class=".systemupdate.SystemUpdateSettingsContentProvider" enabled="false" />
+    </component-override>
+
+    <component-override package="com.google.android.dialer">
+        <component class=".rtt.settings.impl.gateway.RttSettingsDeepLink" enabled="false" />
     </component-override>
 
     <component-override package="com.google.android.gms">
