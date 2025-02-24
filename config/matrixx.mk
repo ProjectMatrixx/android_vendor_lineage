@@ -42,13 +42,22 @@ ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
+# Include Nexus-specific overlays if TARGET_INCLUDE_NEXUS is true
 ifeq ($(TARGET_INCLUDE_NEXUS),true)
 $(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
 PRODUCT_PACKAGES += \
     GoogleSettingsOverlayNexus
+
+# Include specific overlays if TARGET_SUPPORTS_WALLEFFECT is true
+else ifeq ($(TARGET_SUPPORTS_WALLEFFECT),true)
+PRODUCT_PACKAGES += \
+    GoogleSettingsOverlayNexus \
+    CustomLauncherOverlay
+
+# Default case:
 else
-    PRODUCT_PACKAGES += \
-        SettingsOverlay
+PRODUCT_PACKAGES += \
+    SettingsOverlay
 endif
 
 # Cloned app exemption
