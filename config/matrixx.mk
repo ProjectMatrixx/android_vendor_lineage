@@ -95,6 +95,10 @@ PRODUCT_PACKAGES += \
     MatLog
 endif
 
+# AvatarPicker
+PRODUCT_PACKAGES += \
+    AvatarPicker
+
 ifneq ($(TARGET_FACE_UNLOCK_SUPPORTED),false)
 PRODUCT_PACKAGES += \
     FaceUnlock
