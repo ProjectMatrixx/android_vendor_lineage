@@ -215,6 +215,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
 
+# QuickSwitch
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.default_launcher=0 \
+    persist.sys.quickswitch_pixel_shipped=1
+
 # rsync
 PRODUCT_PACKAGES += \
     rsync
