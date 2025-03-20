@@ -2,7 +2,7 @@ PRODUCT_VERSION_MAJOR = 15
 PRODUCT_VERSION_MINOR = 0
 
 # Increase MATRIXX Version with each major release.
-MATRIXX_VERSION := 11.2.5
+MATRIXX_VERSION := 11.2.6
 
 MATRIXX_RELEASE_CODE := Cartesian
 
