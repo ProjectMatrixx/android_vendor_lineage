@@ -95,6 +95,9 @@ PRODUCT_PACKAGES += \
     MatLog
 endif
 
+# Default Game prop values
+TARGET_PRODUCT_PROP += vendor/lineage/config/gameprops.prop
+
 # AvatarPicker
 PRODUCT_PACKAGES += \
     AvatarPicker
