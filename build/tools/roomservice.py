@@ -43,8 +43,8 @@ DEBUG = False
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
 custom_default_revision =  "15.0"
 custom_dependencies = "matrixx.dependencies"
-org_manifest = "matrixx"  # leave empty if org is provided in manifest
-org_display = "Matrixx OS"  # needed for displaying
+org_manifest = "Matrixx-Devices"  # leave empty if org is provided in manifest
+org_display = "Project Matrixx"  # needed for displaying
 
 github_auth = None
 
