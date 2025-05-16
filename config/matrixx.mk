@@ -98,6 +98,11 @@ endif
 # Default Game prop values
 TARGET_PRODUCT_PROP += vendor/lineage/config/gameprops.prop
 
+# BYPASS CHARGE SUPPORTED
+BYPASS_CHARGE_SUPPORTED ?= false
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.battery_bypass_supported=$(BYPASS_CHARGE_SUPPORTED)
+
 # AvatarPicker
 PRODUCT_PACKAGES += \
     AvatarPicker
