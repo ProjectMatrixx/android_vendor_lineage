@@ -280,6 +280,22 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     PermissionControllerOverlay
 
+# Default spoofing value
+    persist.sys.pihooks_TYPE?=user \
+    persist.sys.pihooks_TAGS?=release-keys \
+    persist.sys.pihooks_MANUFACTURER?=Google \
+    persist.sys.pihooks_DEVICE?=tokay \
+    persist.sys.pihooks_PRODUCT?=tokay_beta \
+    persist.sys.pihooks_RELEASE?=16 \
+    persist.sys.pihooks_DEVICE_INITIAL_SDK_INT?=21 \
+    persist.sys.pihooks_SECURITY_PATCH?=2025-04-05 \
+    persist.sys.pihooks_ID?=BP22.250325.012 \
+    persist.sys.pihooks_DEBUG?=false \
+    persist.sys.pihooks_SDK_INT?=35
+
+    PIHOOKS_BUILD_GMS_FINGERPRINT := google/tokay_beta/tokay:16/BP22.250325.012/13467521:user/release-keys
+    PIHOOKS_BUILD_GMS_MODEL := Pixel 9
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     libtextclassifier_annotator_en_model \
