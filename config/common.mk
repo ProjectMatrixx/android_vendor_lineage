@@ -280,6 +280,22 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     PermissionControllerOverlay
 
+# Default spoofing value
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.pihooks_TYPE?=user \
+    persist.sys.pihooks_TAGS?=release-keys \
+    persist.sys.pihooks_MANUFACTURER?=Google \
+    persist.sys.pihooks_DEVICE?=oriole \
+    persist.sys.pihooks_PRODUCT?=oriole_beta \
+    persist.sys.pihooks_RELEASE?=16 \
+    persist.sys.pihooks_DEVICE_INITIAL_SDK_INT?=32 \
+    persist.sys.pihooks_SECURITY_PATCH?=2025-05-05 \
+    persist.sys.pihooks_ID?=BP31.250502.008.A1 \
+    persist.sys.pihooks_DEBUG?=false \
+
+    PIHOOKS_BUILD_GMS_FINGERPRINT := google/oriole_beta/oriole:16/BP31.250502.008.A1/13572937:user/release-keys
+    PIHOOKS_BUILD_GMS_MODEL := Pixel 6
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     libtextclassifier_annotator_en_model \
