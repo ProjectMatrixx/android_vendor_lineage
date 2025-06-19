@@ -26,11 +26,12 @@ mkdir -p "./vendor/MatrixxOTA"
 
 if [ -f "$existingOTAjson" ]; then
     # Get data from already existing device JSON
-    maintainer=$(grep -n "\"maintainer\"" "$existingOTAjson" | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs)
-    oem=$(grep -n "\"oem\"" "$existingOTAjson" | cut -d ":" -f 3 | sed 's/"//g' | xargs)
-    device=$(grep -n "\"device\"" "$existingOTAjson" | cut -d ":" -f 3 | sed 's/"//g' | xargs)
-    support_group=$(grep -n "\"support_group\"" "$existingOTAjson" | cut -d ":" -f 3 | sed 's/"//g' | xargs)
-    device_name=`grep -n "\"device_name\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+    maintainer=$(grep -m 1 '"maintainer"' "$existingOTAjson" | cut -d ':' -f2- | sed 's/"//g' | sed 's/,//g' | xargs)
+    oem=$(grep -m 1 '"oem"' "$existingOTAjson" | cut -d ':' -f2- | sed 's/"//g' | sed 's/,//g' | xargs)
+    device=$(grep -m 1 '"device"' "$existingOTAjson" | cut -d ':' -f2- | sed 's/"//g' | sed 's/,//g' | xargs)
+    support_group=$(grep -m 1 '"support_group"' "$existingOTAjson" | sed 's/.*"support_group"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/')
+    device_name=$(grep -m 1 '"device_name"' "$existingOTAjson" | cut -d ':' -f2- | sed 's/"//g' | sed 's/,//g' | xargs)
+
 else
     # Fetch Basic details from build.prop if JSON doesn't exist
     oem=$(grep "ro.product.system.manufacturer" "$buildprop" | cut -d'=' -f2 | xargs)
