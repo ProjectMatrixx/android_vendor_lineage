@@ -3,6 +3,9 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product-if-exists, vendor/lineage/config/matrixx.mk)
 $(call inherit-product-if-exists, vendor/addons/config.mk)
 
+# Allow vendor prebuilt repos to exclude themselves from bp scanning
+-include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
+
 PRODUCT_BRAND ?= ProjectMatrixx
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
