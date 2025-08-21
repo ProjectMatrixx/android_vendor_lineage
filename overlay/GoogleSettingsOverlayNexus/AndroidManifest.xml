@@ -1,6 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.plus.android.overlay.google_settings"
-    android:versionCode="1"
-    android:versionName="1.0">
-    <overlay android:targetPackage="com.android.settings" android:priority="1" android:isStatic="true" />
-</manifest>
