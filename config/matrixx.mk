@@ -41,6 +41,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
 $(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
+PRODUCT_SYSTEM_EXT_PROPERTIES += ro.quickswitch.available=true
 endif
 
 # Cloned app exemption
