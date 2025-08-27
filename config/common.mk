@@ -9,6 +9,11 @@ $(call inherit-product-if-exists, vendor/certification/config.mk)
 
 PRODUCT_BRAND ?= ProjectMatrixx
 
+PERF_ANIM_OVERRIDE ?= false
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
