@@ -944,7 +944,7 @@ generate_host_overrides
 export USE_THINLTO_CACHE=true
 
 function build_kernel() {
-    local lineage_version="lineage-$(_get_build_var_cached PRODUCT_VERSION_MAJOR).$(_get_build_var_cached PRODUCT_VERSION_MINOR)"
+    local lineage_version="$(_get_build_var_cached PRODUCT_VERSION_MAJOR).$(_get_build_var_cached PRODUCT_VERSION_MINOR)"
 
     local target_kernel_device="$(_get_build_var_cached TARGET_KERNEL_DEVICE)"
     local target_kernel_dir="${ANDROID_BUILD_TOP}/$(_get_build_var_cached TARGET_KERNEL_DIR)"
@@ -960,16 +960,13 @@ function build_kernel() {
 
         local target_kernel_manifest="android_kernel_$(echo ${target_kernel_source} | sed -e 's#/#_#g')_manifest"
         local repo_init_args=("-b" "${lineage_version}")
-        if [ -n "${LINEAGE_MIRROR}" ]; then
-            repo_init_args+=("--reference" "${LINEAGE_MIRROR}")
-        fi
 
         touch .out-dir
 
         mkdir -p .repo
         cp -R "${ANDROID_BUILD_TOP}/.repo/repo" "${KERNEL_BUILD_TOP}/.repo/repo"
 
-        if ! repo init -u https://github.com/LineageOS/${target_kernel_manifest}.git ${repo_init_args[@]}; then
+        if ! repo init -u https://github.com/crdroidandroid/${target_kernel_manifest}.git ${repo_init_args[@]}; then
             popd
             return 1
         fi
