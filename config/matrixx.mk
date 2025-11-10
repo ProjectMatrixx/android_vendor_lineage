@@ -46,6 +46,7 @@ ifeq ($(WITH_QS),true)
 PRODUCT_SYSTEM_EXT_PROPERTIES += ro.quickswitch.available=true
 $(call inherit-product, vendor/pixel/launcher/products/launcher.mk)
 $(call inherit-product, vendor/pixel/themepicker/products/themepicker.mk)
+$(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.default_launcher=0 \
     persist.sys.quickswitch_pixel_shipped=1
