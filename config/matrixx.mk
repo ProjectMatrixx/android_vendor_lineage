@@ -41,6 +41,16 @@ ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/pixel/gms/products/gms.mk)
 endif
 
+# QuickSwitch
+ifeq ($(WITH_QS),true)
+PRODUCT_SYSTEM_EXT_PROPERTIES += ro.quickswitch.available=true
+$(call inherit-product, vendor/pixel/launcher/products/launcher.mk)
+$(call inherit-product, vendor/pixel/themepicker/products/themepicker.mk)
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.default_launcher=0 \
+    persist.sys.quickswitch_pixel_shipped=1
+endif
+
 # Cloned app exemption
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml
