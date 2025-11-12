@@ -4,6 +4,9 @@ export LLVM_AOSP_PREBUILTS_VERSION="${CLANG_VERSION}"
 RUST_VERSION=$(grep 'RustDefaultVersion =' build/soong/rust/config/global.go | awk '{print $3}' | awk -F '"' '{print $2}')
 export RUST_AOSP_PREBUILTS_VERSION="${RUST_VERSION}"
 
+# skip abi checks
+export SKIP_ABI_CHECKS=true
+
 # check to see if the supplied product is one we can build
 function check_product()
 {
