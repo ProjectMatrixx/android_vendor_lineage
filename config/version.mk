@@ -4,7 +4,7 @@ PRODUCT_VERSION_MINOR = 0
 # Increase MATRIXX Version with each major release.
 MATRIXX_VERSION := 12.1.0
 
-MATRIXX_RELEASE_CODE := Test
+MATRIXX_RELEASE_CODE := Protium
 
 MATRIXX_BUILD_TYPE := $(shell vendor/lineage/build/verifykeys.sh $(DEFAULT_SYSTEM_DEV_CERTIFICATE))
 
